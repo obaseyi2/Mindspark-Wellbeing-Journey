@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Pure white background with calming accents */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Beautiful purple-blue primary */
+    --primary: 240 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 70% 75%;
+    --primary-light: 245 80% 95%;
+
+    /* Soft lavender secondary */
+    --secondary: 280 40% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    /* Elegant muted tones */
+    --muted: 240 20% 97%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Gentle accent */
+    --accent: 200 50% 96%;
+    --accent-foreground: 220 20% 15%;
+
+    /* Soft pink destructive */
+    --destructive: 350 70% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Subtle borders */
+    --border: 240 25% 92%;
+    --input: 240 25% 94%;
+    --ring: 240 65% 60%;
+
+    /* Beautiful gradients */
+    --gradient-peaceful: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
+    --gradient-calm: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-inspire: linear-gradient(45deg, #e0e7ff 0%, #fdf4ff 50%, #f0f9ff 100%);
+    --gradient-wellness: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 50%, #fef7ff 100%);
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    /* Enhanced shadows */
+    --shadow-gentle: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-peaceful: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-dreamy: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Smooth transitions */
+    --transition-gentle: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --radius: 1.25rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with calming deep tones */
+    --background: 235 25% 8%;
+    --foreground: 240 15% 95%;
+
+    --card: 235 20% 12%;
+    --card-foreground: 240 15% 95%;
+
+    --popover: 235 20% 12%;
+    --popover-foreground: 240 15% 95%;
+
+    /* Gentle purple glow in dark */
+    --primary: 250 60% 70%;
+    --primary-foreground: 235 25% 8%;
+    --primary-glow: 250 65% 75%;
+
+    /* Deep secondary */
+    --secondary: 235 15% 18%;
+    --secondary-foreground: 240 15% 95%;
+
+    /* Dark muted */
+    --muted: 235 15% 15%;
+    --muted-foreground: 240 10% 65%;
+
+    /* Dark accent */
+    --accent: 235 15% 20%;
+    --accent-foreground: 240 15% 95%;
+
+    /* Soft dark destructive */
+    --destructive: 350 65% 65%;
+    --destructive-foreground: 235 25% 8%;
+
+    /* Dark borders */
+    --border: 235 15% 20%;
+    --input: 235 15% 20%;
+    --ring: 250 60% 70%;
+
+    /* Dark gradients */
+    --gradient-peaceful: linear-gradient(135deg, hsl(240 30% 15%), hsl(280 25% 20%));
+    --gradient-calm: linear-gradient(180deg, hsl(235 20% 12%), hsl(240 25% 15%));
+    --gradient-inspire: linear-gradient(45deg, hsl(250 35% 20%), hsl(280 30% 25%));
+    --gradient-wellness: linear-gradient(135deg, hsl(200 25% 15%), hsl(220 30% 18%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
